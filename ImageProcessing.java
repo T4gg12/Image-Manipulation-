@@ -10,11 +10,11 @@ public class ImageProcessing {
     // The provided images are apple.jpg, flower.jpg, and kitten.jpg
 		int[][] imageData = imgToTwoD("./apple.jpg");
     // Or load your own image using a URL!
-		//int[][] imageData = imgToTwoD("https://content.codecademy.com/projects/project_thumbnails/phaser/bug-dodger.png");
-		//viewImageData(imageData);
+		int[][] imageData = imgToTwoD("https://content.codecademy.com/projects/project_thumbnails/phaser/bug-dodger.png");
+		viewImageData(imageData);
 		int[][] trimmed = trimBorders(imageData, 60);
 		twoDToImage(trimmed, "./trimmed_apple.jpg");
-		// int[][] allFilters = stretchHorizontally(shrinkVertically(colorFilter(negativeColor(trimBorders(invertImage(imageData), 50)), 200, 20, 40)));
+		int[][] allFilters = stretchHorizontally(shrinkVertically(colorFilter(negativeColor(trimBorders(invertImage(imageData), 50)), 200, 20, 40)));
 		// Painting with pixels
 	}
 	// Image Processing Methods
@@ -34,36 +34,28 @@ public class ImageProcessing {
 		}
 	}
 	public static int[][] negativeColor(int[][] imageTwoD) {
-		// TODO: Fill in the code for this method
 		return null;
 	}
 	public static int[][] stretchHorizontally(int[][] imageTwoD) {
-		// TODO: Fill in the code for this method
 		return null;
 	}
 	public static int[][] shrinkVertically(int[][] imageTwoD) {
-		// TODO: Fill in the code for this method
 		return null;
 	}
 	public static int[][] invertImage(int[][] imageTwoD) {
-		// TODO: Fill in the code for this method
 		return null;
 	}
 	public static int[][] colorFilter(int[][] imageTwoD, int redChangeValue, int greenChangeValue, int blueChangeValue) {
-		// TODO: Fill in the code for this method
 		return null;
 	}
 	// Painting Methods
 	public static int[][] paintRandomImage(int[][] canvas) {
-		// TODO: Fill in the code for this method
 		return null;
 	}
 	public static int[][] paintRectangle(int[][] canvas, int width, int height, int rowPosition, int colPosition, int color) {
-		// TODO: Fill in the code for this method
 		return null;
 	}
 	public static int[][] generateRectangles(int[][] canvas, int numRectangles) {
-		// TODO: Fill in the code for this method
 		return null;
 	}
 	// Utility Methods
