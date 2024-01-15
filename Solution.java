@@ -13,9 +13,9 @@ public class Solution {
 		int[][] imageData = imgToTwoD("./apple.jpg");
 		
     // Or load your own image using a URL!
-		//int[][] imageData = imgToTwoD("https://content.codecademy.com/projects/project_thumbnails/phaser/bug-dodger.png");
+		int[][] imageData = imgToTwoD("https://content.codecademy.com/projects/project_thumbnails/phaser/bug-dodger.png");
 
-		//viewImageData(imageData);
+		viewImageData(imageData);
 
 		int[][] trimmed = trimBorders(imageData, 60);
 
@@ -46,7 +46,7 @@ public class Solution {
 
 		twoDToImage(coloredImg, "./colored_apple.jpg");
 
-		// int[][] allFilters = stretchHorizontally(shrinkVertically(colorFilter(negativeColor(trimBorders(invertImage(imageData), 50)), 200, 20, 40)));
+		int[][] allFilters = stretchHorizontally(shrinkVertically(colorFilter(negativeColor(trimBorders(invertImage(imageData), 50)), 200, 20, 40)));
 
 		
 		// Painting with pixels
@@ -87,7 +87,7 @@ public class Solution {
 	}
 
 	public static int[][] negativeColor(int[][] imageTwoD) {
-		// TODO: Fill in the code for this method
+		
 		int[][] manipulatedImg = new int[imageTwoD.length][imageTwoD[0].length];
 		for (int i = 0; i < imageTwoD.length; i++) {
 			for (int j = 0; j < imageTwoD[i].length; j++) {
@@ -102,7 +102,7 @@ public class Solution {
 	}
 
 	public static int[][] stretchHorizontally(int[][] imageTwoD) {
-		// TODO: Fill in the code for this method
+	
 		int[][] manipulatedImg = new int[imageTwoD.length][imageTwoD[0].length * 2];
 		int it = 0;
 		for (int i = 0; i < imageTwoD.length; i++) {
@@ -116,7 +116,7 @@ public class Solution {
 	}
 
 	public static int[][] shrinkVertically(int[][] imageTwoD) {
-		// TODO: Fill in the code for this method
+		
 		int[][] manipulatedImg = new int[imageTwoD.length / 2][imageTwoD[0].length];
 		int it = 0;
 		for (int i = 0; i < imageTwoD[0].length; i++) {
@@ -128,7 +128,7 @@ public class Solution {
 	}
 
 	public static int[][] invertImage(int[][] imageTwoD) {
-		// TODO: Fill in the code for this method
+		
 		int[][] invertedImg = new int[imageTwoD.length][imageTwoD[0].length];
 		for (int i = 0; i < imageTwoD.length; i++) {
 			for (int j = 0; j < imageTwoD[i].length; j++) {
@@ -140,7 +140,7 @@ public class Solution {
 
 	public static int[][] colorFilter(int[][] imageTwoD, int redChangeValue, int greenChangeValue,
 			int blueChangeValue) {
-		// TODO: Fill in the code for this method
+		
 		int[][] manipulatedImg = new int[imageTwoD.length][imageTwoD[0].length];
 		for (int i = 0; i < imageTwoD.length; i++) {
 			for (int j = 0; j < imageTwoD[i].length; j++) {
@@ -182,7 +182,7 @@ public class Solution {
 	// Painting Methods
 
 	public static int[][] paintRandomImage(int[][] canvas) {
-		// TODO: Fill in the code for this method
+		
 		Random rand = new Random();
 		for (int i = 0; i < canvas.length; i++) {
 			for (int j = 0; j < canvas[i].length; j++) {
@@ -195,7 +195,7 @@ public class Solution {
 
 	public static int[][] paintRectangle(int[][] canvas, int width, int height, int rowPosition, int colPosition,
 			int color) {
-		// TODO: Fill in the code for this method
+		
 		for (int i = 0; i < canvas.length; i++) {
 			for (int j = 0; j < canvas[i].length; j++) {
 				if (i >= rowPosition && i <= rowPosition + width) {
@@ -209,7 +209,7 @@ public class Solution {
 	}
 
 	public static int[][] generateRectangles(int[][] canvas, int numRectangles) {
-		// TODO: Fill in the code for this method
+		
 		Random rand = new Random();
 		for (int i = 0; i < numRectangles; i++) {
 			int randomWidth = rand.nextInt(canvas[0].length);
